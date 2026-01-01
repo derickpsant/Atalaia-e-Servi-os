@@ -40,7 +40,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -1199,4 +1199,5 @@ nav ul li a.active::after {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+
 }
