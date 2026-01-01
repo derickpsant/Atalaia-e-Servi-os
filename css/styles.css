@@ -89,7 +89,7 @@ body {
 }
 
 .nav-toggle {
-    display: flex;
+    display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
@@ -1201,5 +1201,6 @@ nav ul li a.active::after {
     }
 
 }
+
 
 
