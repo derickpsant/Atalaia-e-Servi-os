@@ -56,7 +56,7 @@ body {
 }
 
 .nav-menu {
-    display: flex;
+    display: none;
     list-style: none;
     gap: 2rem;
 }
@@ -1201,4 +1201,5 @@ nav ul li a.active::after {
     }
 
 }
+
 
