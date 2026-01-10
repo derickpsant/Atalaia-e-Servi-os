@@ -1092,8 +1092,8 @@ nav ul li a.active::after {
     .contact-item {
         display: flex;
         flex-direction: column; /* Ícone acima do texto */
-        align-items: center;    /* Centraliza horizontalmente */
-        text-align: center;     /* Centraliza o texto */
+        align-items: left;    /* Centraliza horizontalmente */
+        text-align: left;     /* Centraliza o texto */
         width: 100%;
         box-sizing: border-box;
         padding: 1.5rem;
@@ -1172,3 +1172,4 @@ nav ul li a.active::after {
         transition-duration: 0.01ms !important;
     }
 }
+
