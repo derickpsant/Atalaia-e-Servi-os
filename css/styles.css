@@ -1046,7 +1046,7 @@ nav ul li a.active::after {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1201,3 +1201,4 @@ nav ul li a.active::after {
     }
 
 }
+
