@@ -1045,9 +1045,9 @@ nav ul li a.active::after {
     transform: translateY(0);
 }
 
-/* Responsive Design */
+/* Responsive Design Atualizado */
 @media (max-width: 480px) {
-    /* Impede o transbordamento horizontal de todo o site */
+    /* Impede o transbordamento horizontal */
     html, body {
         overflow-x: hidden;
         width: 100%;
@@ -1057,6 +1057,7 @@ nav ul li a.active::after {
         padding: 0 15px;
     }
 
+    /* Menu Mobile */
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1082,6 +1083,51 @@ nav ul li a.active::after {
     .nav-toggle.is-active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-toggle.is-active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+    /* Centralização dos Cards de Contato e Serviços */
+    .services-grid, .contact-content, .about-content, .about-stats, .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column; /* Ícone acima do texto */
+        align-items: center;    /* Centraliza horizontalmente */
+        text-align: center;     /* Centraliza o texto */
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5rem;
+    }
+
+    .contact-item i, .contact-item img, .contact-item .icon {
+        margin-right: 0 !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Ajuste de Texto para não vazar */
+    .contact-item p, .contact-item span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+
+    /* Centralização da Imagem (Ilustração) */
+    .image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: none !important;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .image-wrapper img {
+        max-width: 80%; /* Ajusta o tamanho da vassoura para não ficar gigante */
+        height: auto;
+    }
+
+    /* Elementos de Texto e Botões */
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1089,59 +1135,40 @@ nav ul li a.active::after {
     }
 
     .hero-title { font-size: 2rem; }
-    .hero-description { font-size: 1.1rem; }
-    .hero-buttons { justify-content: center; }
-    .image-wrapper { transform: none; }
-
-    .section-title { font-size: 1.8rem; }
-
-    /* Ajuste dos cards de serviços e contato */
-    .services-grid, .contact-content, .about-content, .about-stats, .footer-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .service-card, .contact-item {
+    .hero-buttons { 
+        justify-content: center; 
         width: 100%;
-        box-sizing: border-box; /* Essencial para o padding não estourar a largura */
-        padding: 1.5rem;
-        transform: none !important;
     }
 
-    /* Força quebra de texto em endereços ou emails longos */
-    .contact-item p, .contact-item span {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        font-size: 0.95rem;
-    }
+    .section-title { font-size: 1.8rem; text-align: center; }
 
-    .form-row { grid-template-columns: 1fr; }
-    
     .contact-form {
         padding: 1.5rem;
         width: 100%;
         box-sizing: border-box;
     }
 
+    .form-row { grid-template-columns: 1fr; }
+    
     .btn {
         padding: 12px 24px;
         font-size: 1rem;
+        width: 100%; /* Botão ocupa a largura no mobile */
+        max-width: 300px;
     }
 
     .social-links { justify-content: center; }
 }
 
-/* High contrast mode */
+/* Modos de acessibilidade permanecem os mesmos */
 @media (prefers-contrast: high) {
     .hero { background: white; }
     .service-card, .contact-item { border: 2px solid #333; }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
 }
